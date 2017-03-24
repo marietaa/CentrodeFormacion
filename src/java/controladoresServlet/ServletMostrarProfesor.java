@@ -30,9 +30,9 @@ public class ServletMostrarProfesor extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Listado de Profesores</h1>");
             while (lista_profesores.next()) {
-                out.println("<p>" + lista_profesores.getString("idAlumno") + "</p>");
+                out.println("<p>" + lista_profesores.getString("idProfesor") + "</p>");
                 out.println("<p>" + lista_profesores.getString("nombre") + " " + lista_profesores.getString("apellido") + "</p>");
-                out.println("<p>" + lista_profesores.getString("curso") + "</p>");
+                out.println("<p>" + lista_profesores.getString("especialidad") + "</p>");
                 out.println("<p>---------------------------------------------------------------</p>");
                 //out.println("<br/>");
             }

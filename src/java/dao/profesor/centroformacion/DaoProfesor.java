@@ -15,7 +15,7 @@ public class DaoProfesor {
 
         Connection conexion = Conexion.abrirConexion();
         Statement sentencia = conexion.createStatement();
-        String consultaSQL = "insert into centroformacion (idProfesor,nombre,apellido,especialidad) values ";
+        String consultaSQL = "insert into Profesor (idProfesor,nombre,apellido,especialidad) values ";
         consultaSQL += "('" + idProfesor + "','" + nombre + "','" + apellido + "','" + especialidad + "')";
         sentencia.executeUpdate(consultaSQL);
         sentencia.close();
@@ -27,7 +27,7 @@ public class DaoProfesor {
 
         Connection conexion = Conexion.abrirConexion();
         Statement sentencia = conexion.createStatement();
-        String consultaSQL = "select idProfesor,nombre,apellido,especialidad from centroformacion";
+        String consultaSQL = "select idProfesor,nombre,apellido,especialidad from Profesor";
         ResultSet lista_profesores = sentencia.executeQuery(consultaSQL);
         return lista_profesores;
 
@@ -38,7 +38,7 @@ public class DaoProfesor {
         Connection conexion = Conexion.abrirConexion();
         Statement sentencia = conexion.createStatement();
 
-        String consultaSQL = "update centroformacion set nombre=?, apellido=?, especialidad=? where idProfesor=?";
+        String consultaSQL = "update Profesor set nombre=?, apellido=?, especialidad=? where idProfesor=?";
         PreparedStatement actualizar = conexion.prepareStatement(consultaSQL);
         //los numeros son la posicion de la consulta SQL
         actualizar.setString(1, nombre);

@@ -32,12 +32,12 @@
     
     <!--PROFESOR-->
     <servlet>
-        <servlet-name>ServletInsertartProfesor</servlet-name>
+        <servlet-name>ServletInsertarProfesor</servlet-name>
         <servlet-class>controladoresServlet.ServletInsertarProfesor</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ServletInsertartProfesor</servlet-name>
-        <url-pattern>/ServletInsertartProfesor</url-pattern>
+        <servlet-name>ServletInsertarProfesor</servlet-name>
+        <url-pattern>/ServletInsertarProfesor</url-pattern>
     </servlet-mapping>
     
     <servlet>

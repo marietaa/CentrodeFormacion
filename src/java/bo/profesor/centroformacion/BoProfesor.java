@@ -1,6 +1,6 @@
 package bo.profesor.centroformacion;
 
-import dao.alumno.centroformacion.DaoAlumno;
+
 import dao.profesor.centroformacion.DaoProfesor;
 import entidades.Profesor;
 import java.io.IOException;
@@ -27,7 +27,7 @@ public class BoProfesor {
         teacher.setNombre(request.getParameter("nombre"));
         teacher.setApellido(request.getParameter("apellido"));
         teacher.setEspecialidad(request.getParameter("especialidad"));
-        DaoAlumno.actualizarAlumno(teacher.getNombre(), teacher.getApellido(), teacher.getEspecialidad(), teacher.getIdProfesor());
+        DaoProfesor.actualizarProfesor(teacher.getNombre(), teacher.getApellido(), teacher.getEspecialidad(), teacher.getIdProfesor());
         response.sendRedirect("ServletMostrarProfesor");
     }
 
