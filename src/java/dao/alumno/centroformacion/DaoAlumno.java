@@ -38,7 +38,7 @@ public class DaoAlumno {
         Connection conexion = Conexion.abrirConexion();
         Statement sentencia = conexion.createStatement();
 
-        String consultaSQL = "update Alumno set nombre=?, apellido=?, curso=? where idAlumno=?";
+        String consultaSQL = "update Alumno set nombre=?, apellido=?, curso=?, idAlumno=?";
         PreparedStatement actualizar = conexion.prepareStatement(consultaSQL);
         //los numeros son la posicion de la consulta SQL
         actualizar.setString(1, nombre);

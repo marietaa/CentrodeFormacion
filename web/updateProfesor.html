@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Actualizaciones Camarero</title>
+	<title>Actualizaciones de Profesores</title>
 
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-register.css">
@@ -15,7 +15,7 @@
 </head>
     <ul>
         <li><a href="index.htm">Indice</a></li>
-        <li><a href="registroCamarero.html" class="active">Actualizar Camarero</a></li>
+        <li><a href="updateProfesor.html" class="active">Actualizar Profesor</a></li>
         <li><a href="login.html">Login</a></li>
        <!--<li><a href="form-mini.html">Mini</a></li>
         <li><a href="form-labels-on-top.html">Labels on Top</a></li>
@@ -28,14 +28,14 @@
 
         <!-- You only need this form and the form-register.css -->
 
-        <form class="form-register" method="post" action="ControladorServletCamarero">
+        <form class="form-register" method="post" action="ServletActualizarProfesor">
 
             <div class="form-register-with-email">
 
                 <div class="form-white-background">
 
                     <div class="form-title-row">
-                        <h1>Actualizar Camarero</h1>
+                        <h1>Actualizar Profesor</h1>
                     </div>
 
                     <div class="form-row">
@@ -56,9 +56,9 @@
                         <label>
                             <span>Especialidad</span>
                             <select id="especialidad" name="especialidad">
-                                <option>Barra</option>
-                                <option>Comedor</option>
-                                <option>Terraza</option>
+                               <option>Programacion Web</option>
+                                <option>Office</option>   
+                                <option>Aplicaciones Movil</option>
                             </select>
                         </label>
                     </div>
@@ -67,14 +67,14 @@
                     
                     <div class="form-row">
                         <label>
-                            <span>IdCamarero</span>
-                            <input type="text" name="idCamarero">
+                            <span>IdProfesor</span>
+                            <input type="text" name="idProfesor">
                         </label>
                     </div>
-                    <!--Paso un valor oculto al controlador que actualiza-->
+                    <!--Paso un valor oculto al controlador que actualiza
                      <div class="form-row">     
                             <input type="hidden" name="action" value="update">
-                    </div>
+                    </div>-->
 
                     <div class="form-row">
                         <label class="form-checkbox">
@@ -99,9 +99,9 @@
                     <span class="form-title">Administracion</span>
                 </div>
 
-                <a href="#" class="form-google-button">Baja Camarero</a>
+                <a href="#" class="form-google-button">Baja</a>
                 <a href="#" class="form-facebook-button">Buscar</a>
-                <a href="#" class="form-twitter-button">Actualizar Camarero</a>
+                <a href="#" class="form-twitter-button">Actualizar</a>
 
             </div>
 
