@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Alta de Alumnos</title>
+	<title>Dar de baja Profesores</title>
 
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-register.css">
@@ -15,10 +15,10 @@
 </head>
     <ul>
         <li><a href="index.htm">Indice</a></li>
-        <li><a href="registroAlumno.html" class="active">Dar de Alta</a></li>
+        <li><a href="registroProfesor.html" class="active">Dar de Alta</a></li>
         <li><a href="#">Listar</a></li>
-        <li><a href="updateAlumno.html">Actualizar datos</a></li>
-        <li><a href="borrarAlumno.html">Borrar datos</a></li>
+        <li><a href="updateProfesor.html">Actualizar datos</a></li>
+        <li><a href="borrarProfesor.html">Borrar datos</a></li>
         
     </ul>
 
@@ -27,24 +27,24 @@
 
         <!-- You only need this form and the form-register.css -->
 
-        <form class="form-register" method="post" action="ServletInsertarAlumno">
+        <form class="form-register" method="post" action="ServletBorrarProfesor">
 
             <div class="form-register-with-email">
 
                 <div class="form-white-background">
 
                     <div class="form-title-row">
-                        <h1>Alta de Alumnos</h1>
+                        <h1>Baja de Profesores</h1>
                     </div>
 
                     <div class="form-row">
                         <label>
-                            <span>IdAlumno</span>
-                            <input type="int" name="idAlumno">
+                            <span>IdProfesor</span>
+                            <input type="int" name="idProfesor">
                         </label>
                     </div>
 
-                    <div class="form-row">
+                   <!-- <div class="form-row">
                         <label>
                             <span>Nombre</span>
                             <input type="text" name="nombre">
@@ -60,14 +60,14 @@
                     
                        <div class="form-row">
                         <label>
-                            <span>Curso</span>
-                            <select id="especialidad" name="curso">
-                                <option>Java</option>
-                                <option>HTML5</option>
-                                <option>Angular</option>
+                            <span>Especialidad</span>
+                            <select id="especialidad" name="especialidad">
+                                 <option>Programacion Web</option>
+                                <option>Office</option>   
+                                <option>Aplicaciones Movil</option>
                             </select>
                         </label>
-                    </div>
+                    </div>-->
 
                     <div class="form-row">
                         <label class="form-checkbox">
@@ -77,7 +77,7 @@
                     </div>
 
                     <div class="form-row">
-                        <button type="submit">Registrar</button>
+                        <button type="submit">Borrar</button>
                     </div>
 
                 </div>

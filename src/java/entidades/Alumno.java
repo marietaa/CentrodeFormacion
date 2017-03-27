@@ -3,22 +3,21 @@ package entidades;
 
 
 public class Alumno {
-    private String idAlumno;
+    private int idAlumno;
     private String nombre;
     private String apellido;
     private String curso;
 
-    
-    //Constructor vacio
     public Alumno() {
     }
+    
+    
 
-    //Getter and Setter
-    public String getIdAlumno() {
+    public int getIdAlumno() {
         return idAlumno;
     }
 
-    public void setIdAlumno(String idAlumno) {
+    public void setIdAlumno(int idAlumno) {
         this.idAlumno = idAlumno;
     }
 
@@ -45,6 +44,7 @@ public class Alumno {
     public void setCurso(String curso) {
         this.curso = curso;
     }
+
     
     
 }

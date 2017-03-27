@@ -4,21 +4,23 @@ package entidades;
 
 public class Profesor {
    
-    private String idProfesor;
+    private int idProfesor;
     private String nombre;
     private String apellido;
     private String especialidad;
     
     //Constructor vacio
+
     public Profesor() {
     }
-
+   
     //Getter and Setter
-    public String getIdProfesor() {
+
+    public int getIdProfesor() {
         return idProfesor;
     }
 
-    public void setIdProfesor(String idProfesor) {
+    public void setIdProfesor(int idProfesor) {
         this.idProfesor = idProfesor;
     }
 
@@ -45,5 +47,5 @@ public class Profesor {
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
-    
+   
 }

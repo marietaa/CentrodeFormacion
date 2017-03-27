@@ -16,7 +16,7 @@ public class ServletActualizarAlumno extends HttpServlet {
             throws ServletException, IOException, ClassNotFoundException, SQLException {
 
         BoAlumno.procesarActualizarAlumno(request, response);
-
+       
     }
 
 @Override

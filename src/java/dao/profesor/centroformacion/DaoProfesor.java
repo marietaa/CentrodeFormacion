@@ -11,7 +11,7 @@ import utilidades.Conexion;
 
 public class DaoProfesor {
    
-    public static void insertarProfesor(String idProfesor, String nombre, String apellido, String especialidad) throws SQLException, ClassNotFoundException {
+    public static void insertarProfesor(int idProfesor, String nombre, String apellido, String especialidad) throws SQLException, ClassNotFoundException {
 
         Connection conexion = Conexion.abrirConexion();
         Statement sentencia = conexion.createStatement();
@@ -33,7 +33,7 @@ public class DaoProfesor {
 
     }
 
-    public static void actualizarProfesor(String idProfesor, String nombre, String apellido, String especialidad) throws ClassNotFoundException, SQLException {
+    public static void actualizarProfesor(String nombre, String apellido, String especialidad, int idProfesor) throws ClassNotFoundException, SQLException {
 
         Connection conexion = Conexion.abrirConexion();
         Statement sentencia = conexion.createStatement();
@@ -44,17 +44,22 @@ public class DaoProfesor {
         actualizar.setString(1, nombre);
         actualizar.setString(2, apellido);
         actualizar.setString(3, especialidad);
-        actualizar.setString(4, idProfesor);
+        actualizar.setInt(4, idProfesor);
         //Execute update devuelve el numero de filas afectadas
-        int filasAfectadas = actualizar.executeUpdate(consultaSQL);
+        int filasAfectadas = actualizar.executeUpdate();
         System.out.println("Filas afectadas: " + filasAfectadas);
 
     }
     
-    public static void borrarProfesor (String idProfesor, String nombre, String apellido, String especialidad){
-    
-        //PENDIENTE DE HACER
-    
+     public static void borrarProfesor(int idProfesor, String nombre, String apellido, String especialidad) throws ClassNotFoundException, SQLException {
+
+        Connection conexion = Conexion.abrirConexion();
+        String consultaSQL = "delete from Profesor where idProfesor=?";
+        PreparedStatement borrar = conexion.prepareStatement(consultaSQL);
+        borrar.setInt(1, idProfesor);
+        //Execute update devuelve el numero de filas afectadas
+        int filasAfectadas = borrar.executeUpdate();
+        System.out.println("Filas afectadas: " + filasAfectadas);
     }
 
 }
