@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+    <head>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Dar de baja Alumnos</title>
+        <title>Dar de baja Alumnos</title>
 
-	<link rel="stylesheet" href="assets/demo.css">
-	<link rel="stylesheet" href="assets/form-register.css">
+        <link rel="stylesheet" href="assets/demo.css">
+        <link rel="stylesheet" href="assets/form-register.css">
 
-</head>
+    </head>
     <ul>
-         
+
         <li><a href="index.htm">Indice</a></li>
         <li><a href="registroAlumno.html" >Dar de Alta</a></li>
         <li><a href="mostrarAlumno.html">Listado de Alumnos</a></li>
         <li><a href="updateAlumno.html">Actualizar datos</a></li>
         <li><a href="borrarAlumno.html" class="active">Dar de Baja</a></li>
-        
+
     </ul>
 
 
@@ -38,11 +38,16 @@
                         <h1>Dar de baja Alumnos</h1>
                     </div>
 
-                   <div class="form-row">
+                    <div class="form-row">
                         <label>
                             <span>IdAlumno</span>
                             <input type="int" name="idAlumno">
                         </label>
+                    </div>
+
+                     <!--Paso un valor oculto al controlador (borrar)-->
+                    <div class="form-row">     
+                        <input type="hidden" name="action" value="borrar">
                     </div>
 
                     <!--<div class="form-row">
@@ -90,7 +95,7 @@
             <div class="form-sign-in-with-social">
 
                 <div class="form-row form-title-row">
-                   <span class="form-title">Contacto</span>
+                    <span class="form-title">Contacto</span>
                 </div>
 
                 <a href="#" class="form-google-button">Google</a>

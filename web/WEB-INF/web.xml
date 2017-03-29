@@ -13,6 +13,14 @@
         <servlet-name>ServletBorrarProfesor</servlet-name>
         <servlet-class>controladoresServlet.ServletBorrarProfesor</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogCentroFormacion</servlet-name>
+        <servlet-class>controladoresServlet.LogCentroFormacion</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorServletAlumno</servlet-name>
+        <servlet-class>controladoresServlet.ControladorServletAlumno</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletInsertarAlumno</servlet-name>
         <url-pattern>/ServletInsertarAlumno</url-pattern>
@@ -68,6 +76,14 @@
     <servlet-mapping>
         <servlet-name>ServletBorrarProfesor</servlet-name>
         <url-pattern>/ServletBorrarProfesor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogCentroFormacion</servlet-name>
+        <url-pattern>/LogCentroFormacion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorServletAlumno</servlet-name>
+        <url-pattern>/ControladorServletAlumno</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
