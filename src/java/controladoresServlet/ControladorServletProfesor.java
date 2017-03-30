@@ -1,6 +1,7 @@
 package controladoresServlet;
 
-import bo.alumno.centroformacion.BoAlumno;
+import bo.profesor.centroformacion.BoProfesor;
+import dao.profesor.centroformacion.DaoProfesor;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -11,10 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class ControladorServletAlumno extends HttpServlet {
+public class ControladorServletProfesor extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, ClassNotFoundException, SQLException {
+            throws ServletException, IOException, SQLException, ClassNotFoundException {
 
         //Comprobamos si el usuario esta logueado    
         HttpSession misession = (HttpSession) request.getSession();
@@ -27,51 +28,53 @@ public class ControladorServletAlumno extends HttpServlet {
             //recupera el action del formulario
 
             if (action.contains("insertar")) {
-                BoAlumno.procesarInsertarAlumno(request, response);
+                BoProfesor.procesarInsertarProfesor(request, response);
             }
 
             if (action.contains("actualizar")) {
-                BoAlumno.procesarActualizarAlumno(request, response);
+                BoProfesor.procesarActualizarProfesor(request, response);
             }
 
             if (action.contains("borrar")) {
-                BoAlumno.procesarBorrarAlumno(request, response);
+                BoProfesor.procesarBorrarProfesor(request, response);
             }
 
-            //if (action.contains("mostrar")) {
-           //     DaoAlumno.mostrarAlumno();
+           // if (action.contains("mostrar")) {
+               // DaoProfesor.mostrarProfesor();
            // }
-
         } else {
             response.sendRedirect("login.html");
         }
 
     }
 
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
             processRequest(request, response);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ControladorServletAlumno.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(ControladorServletAlumno.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ControladorServletProfesor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ControladorServletProfesor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
+ 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
             processRequest(request, response);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ControladorServletAlumno.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(ControladorServletAlumno.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ControladorServletProfesor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ControladorServletProfesor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
+    
     @Override
     public String getServletInfo() {
         return "Short description";

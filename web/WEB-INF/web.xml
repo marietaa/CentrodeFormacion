@@ -21,6 +21,10 @@
         <servlet-name>ControladorServletAlumno</servlet-name>
         <servlet-class>controladoresServlet.ControladorServletAlumno</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorServletProfesor</servlet-name>
+        <servlet-class>controladoresServlet.ControladorServletProfesor</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletInsertarAlumno</servlet-name>
         <url-pattern>/ServletInsertarAlumno</url-pattern>
@@ -84,6 +88,10 @@
     <servlet-mapping>
         <servlet-name>ControladorServletAlumno</servlet-name>
         <url-pattern>/ControladorServletAlumno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorServletProfesor</servlet-name>
+        <url-pattern>/ControladorServletProfesor</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
