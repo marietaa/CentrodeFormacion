@@ -19,7 +19,7 @@ public class BoProfesor {
         teacher.setApellido(request.getParameter("apellido"));
         teacher.setEspecialidad(request.getParameter("especialidad"));
         DaoProfesor.insertarProfesor(teacher.getIdProfesor(), teacher.getNombre(), teacher.getApellido(), teacher.getEspecialidad());
-        response.sendRedirect("ServletMostrarProfesor");
+        //response.sendRedirect("ServletMostrarProfesor");
     }
 
     public static void procesarActualizarProfesor(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException {
@@ -30,7 +30,7 @@ public class BoProfesor {
         teacher.setEspecialidad(request.getParameter("especialidad"));
         teacher.setIdProfesor(Integer.parseInt(request.getParameter("idProfesor")));
         DaoProfesor.actualizarProfesor(teacher.getNombre(), teacher.getApellido(), teacher.getEspecialidad(), teacher.getIdProfesor());
-        response.sendRedirect("ServletMostrarProfesor");
+        //response.sendRedirect("ServletMostrarProfesor");
     }
     
     public static void procesarBorrarProfesor(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException {
@@ -41,7 +41,7 @@ public class BoProfesor {
         teacher.setApellido(request.getParameter("apellido"));
         teacher.setEspecialidad(request.getParameter("especialidad"));
         DaoProfesor.borrarProfesor(teacher.getIdProfesor(), teacher.getNombre(), teacher.getApellido(), teacher.getEspecialidad());
-        response.sendRedirect("ServletMostrarProfesor");
+        //response.sendRedirect("ServletMostrarProfesor");
     }
 
 }

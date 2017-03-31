@@ -28,19 +28,20 @@ public class ControladorServletAlumno extends HttpServlet {
 
             if (action.contains("insertar")) {
                 BoAlumno.procesarInsertarAlumno(request, response);
+                response.sendRedirect("mostrarAlumno.jsp");
             }
 
             if (action.contains("actualizar")) {
                 BoAlumno.procesarActualizarAlumno(request, response);
+                response.sendRedirect("mostrarAlumno.jsp");
             }
 
             if (action.contains("borrar")) {
                 BoAlumno.procesarBorrarAlumno(request, response);
+                response.sendRedirect("mostrarAlumno.jsp");
             }
 
-            //if (action.contains("mostrar")) {
-           //     DaoAlumno.mostrarAlumno();
-           // }
+          
 
         } else {
             response.sendRedirect("login.html");

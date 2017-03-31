@@ -49,7 +49,7 @@ public class DaoAlumno {
         Conexion.cerrarConexion();
     }
 
-    public static void borrarAlumno(int idAlumno, String nombre, String apellido, String curso) throws ClassNotFoundException, SQLException {
+    public static void borrarAlumno(int idAlumno) throws ClassNotFoundException, SQLException {
 
         Connection conexion = Conexion.abrirConexion();
         String consultaSQL = "delete from Alumno where idAlumno=?";

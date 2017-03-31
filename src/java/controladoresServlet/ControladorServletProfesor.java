@@ -29,26 +29,26 @@ public class ControladorServletProfesor extends HttpServlet {
 
             if (action.contains("insertar")) {
                 BoProfesor.procesarInsertarProfesor(request, response);
+                response.sendRedirect("mostrarProfesor.jsp");
             }
 
             if (action.contains("actualizar")) {
                 BoProfesor.procesarActualizarProfesor(request, response);
+                response.sendRedirect("mostrarProfesor.jsp");
             }
 
             if (action.contains("borrar")) {
                 BoProfesor.procesarBorrarProfesor(request, response);
+                response.sendRedirect("mostrarProfesor.jsp");
             }
 
-           // if (action.contains("mostrar")) {
-               // DaoProfesor.mostrarProfesor();
-           // }
+            
         } else {
             response.sendRedirect("login.html");
         }
 
     }
 
-    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -61,7 +61,6 @@ public class ControladorServletProfesor extends HttpServlet {
         }
     }
 
- 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -74,7 +73,6 @@ public class ControladorServletProfesor extends HttpServlet {
         }
     }
 
-    
     @Override
     public String getServletInfo() {
         return "Short description";
